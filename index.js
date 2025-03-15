@@ -16,8 +16,7 @@ const fuelBurnRateKgPer = 0.5; // fuel burn rate (kg/s)
 const velocityMs = velocityKmh * (1000/3600); // Convert velocity from km/h to m/s for correct calculations
 
 // Pick up an error with how the function below is called and make it robust to such errors
-calcNewVel = (vel, acc, time) => { 
-  return vel + (acc*time)
+const calcNewVelocity = (velocity, acceleration, time) => {
 }
 
 console.log(`Corrected New Velocity: ${vel2} km/h`);
