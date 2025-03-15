@@ -17,6 +17,17 @@ const velocityMs = velocityKmh * (1000/3600); // Convert velocity from km/h to m
 
 // Pick up an error with how the function below is called and make it robust to such errors
 const calcNewVelocity = (velocity, acceleration, time) => {
+
+  if (typeof velocity !== "number" || typeof acceleration !== "number" || typeof time !== "number"){
+    throw new Error ("Velocity, acceleration and time must be numbers!!!")
+  }
+
+  if (time < 0 ){
+    throw new Error("Time cannot be negative.")
+  }
+  
+  
+  return velocity + (acceleration * time)
 }
 
 console.log(`Corrected New Velocity: ${vel2} km/h`);
